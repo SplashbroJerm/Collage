@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid collage</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 5px;
+
+            width: 700px;
+            height: 800px;
+        }
+        .item{
+            width: 100%;
+            height: 100%;
+        }
+        .item-1{
+            grid-column: 1;
+            grid-row: span 2;
+            background-color: blue;
+            color: white;
+
+        }
+        .item-2{
+            /* grid-row-start: 1; */
+            grid-column-start: 2;
+            grid-row: span 3;
+            background-color: green;
+        }
+        .item-3{ 
+            grid-column-start: 3;
+            grid-row: span 2;
+            background-color: red;
+        }
+        .item-4{
+            grid-row:span 2;
+            grid-column-start: 1;
+            background-color: purple;
+        }
+        .item-5{
+            grid-row: span 2;
+            grid-column-start: 3;
+            background-color: darkorange;
+        }
+        .item-6{
+            grid-row:span 2;
+            grid-column-start: 1;
+            background-color: cyan;
+        }
+        .item-7{
+            grid-row-start: 4;
+            grid-row-end: span 3;
+            grid-column-start: 2;
+            background-color: darkslategrey;
+            color:white;
+        }
+        .item-8{
+            grid-row: span 2;
+            grid-column-start: 3;
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+        <div class="item item-6">6</div>
+        <div class="item item-7">7</div>
+        <div class="item item-8">8</div>
+    </div>
+</body>
+</html>
